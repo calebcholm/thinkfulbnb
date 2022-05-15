@@ -31,8 +31,9 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
 }
+
 
 /* ---  Groups & Items --- */
 
@@ -64,6 +65,12 @@ header {
   color: #fff;
 }
 
+header nav ul{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
 header nav ul li {
   list-style-type: none;
 }
@@ -83,11 +90,18 @@ header nav ul li a:hover {
 form {
   border: 2px solid #ff385c;
   padding: 10px;
+  justify-content: center;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
 }
 
 form label {
   font-weight: bold;
 }
+
 
 form select,
 form input {
@@ -117,3 +131,70 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width: 600px) {
+  p {
+    font-size: 24px;
+  }
+
+  header {
+    display: flex;
+  }
+
+  header nav {
+    flex: 1;
+  }
+  
+  header nav ul {
+    justify-content: right;
+  }
+
+  form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-direction: wrap;
+  }
+
+  form div {
+    flex: 1;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+  form button {
+    flex: 1;
+  }
+
+  .group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #ideas .group {
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  #ideas div {
+    display: flex;
+    flex-basis: calc(50% - 40px);
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .host{
+    flex-direction: column;
+    justify-content: center;
+  }
+
+ body {
+   display: grid;
+ }
+
+}
