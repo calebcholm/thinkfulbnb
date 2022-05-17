@@ -18,11 +18,16 @@ h3 {
 
 p {
   line-height: 1.5em;
+  font-size: 75%;
   margin: 0;
 }
 
 section {
   padding: 20px;
+}
+
+section li {
+  font-size: 65%;
 }
 
 section.alternate-background {
@@ -61,7 +66,7 @@ header {
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 72px;
+  font-size: 58px;
   color: #fff;
 }
 
@@ -95,7 +100,7 @@ form {
 
 form div {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 form label {
@@ -132,9 +137,13 @@ footer p {
 
 /* -------  Media Query ------- */
 
-@media all and (min-width: 480px) {
+@media all and (min-width: 600px) {
   p {
-    font-size: 24px;
+    font-size: 90%;
+  }
+
+  section li {
+    font-size: 90%;
   }
 
   header {
